@@ -3,14 +3,12 @@ import json
 
 Broker_dev = {
     'bootstrap_servers': [
-        'rc1a-ba5c25fm7u9it8hp.mdb.yandexcloud.net:9091',
-        'rc1b-1krcdm1ruusegflu.mdb.yandexcloud.net:9091',
-        'rc1d-7cqjebgji7rdp6id.mdb.yandexcloud.net:9091'
+# Прописать все 3 брокера указанных в Vault (на всякийслучай)
     ],
     'security_protocol': 'SASL_SSL',
     'sasl_mechanism': 'SCRAM-SHA-512',
-    'sasl_plain_username': 'enterprise-integrations-notification-atom-notification-service',
-    'sasl_plain_password': 'chaiL1bah6ge9cei',
+    'sasl_plain_username': '',         # Из Vault выбрать ...notification-service
+    'sasl_plain_password': '',         # Указать из Vault соответствующий пароль
     'value_serializer': lambda v: json.dumps(v).encode('utf-8'),
     'key_serializer': lambda k: k.encode('utf-8') if k else None
 }

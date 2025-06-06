@@ -39,8 +39,8 @@ def main():
         for ntype in notification_types:
             message = {
                 "eventId": str(uuid.uuid4()),
-                "serviceCode": "AMP",
-                "userId": "1a707768-b542-41be-a950-170128313681", #Указать external_id для соответствующего стенда
+                "serviceCode": "",    # Указать Код сервиса соответствующий notofocationType
+                "userId": "1a707768-b542-41be-a950-170128313681",  #Указать external_id для соответствующего стенда
                 "notificationType": ntype,
                 "data": {
                     "firstName": "Notification User",
